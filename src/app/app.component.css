@@ -1,0 +1,226 @@
+h1{
+   margin: 0;
+}
+
+
+#headers{
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+}
+#header_content #menu{
+    background-color: white;
+    width: 600px;
+    font-size: 16px;
+    margin-left: 25px;
+}
+#header_content{
+    margin: 0 230px auto;
+    padding: 10px;
+    width: 900px;
+    height: 60px;
+
+}
+#header_content #menu a{
+    color: grey;
+}
+#header_content #menu a span{
+    margin: 0 15px;
+}
+#header_content #logo{
+    color: black;
+}
+
+a, a:hover, a:link, a:active {
+    color: black;
+    text-decoration: none;
+}
+#header_content div{
+    display: inline-block;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right
+}
+.section{
+    background-color: #f8f8f8;
+}
+.or{
+    color: grey;
+}
+.fp-tableCell{
+    margin-top: 60px;
+    height: 100%;
+}
+.card{
+    background-color: #f8f8f8;
+    height: 90%;
+}
+.big_item{
+    margin: 15px 45px;
+    width: 350px;
+    height: 450px;
+    display: inline-block;
+    overflow: hidden;
+}
+.item{
+    margin: 15px 45px;
+    width: 170px;
+    height: 240px;
+    display: inline-block;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+
+.no_opacity{
+    opacity: 0;
+}
+.mySlides {
+    position: absolute;
+    top : 0;
+    left : 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+
+}
+.mySlides img{
+    min-width: 100%;
+    min-height: 300px;
+    max-height: 650px;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    min-height: 650px;
+
+}
+.slideshow-container .welcome{
+    position: absolute;
+    text-align: center;
+    font-size: 45px;
+    color: black;
+    left: 40%;
+    top: 40%;
+    z-index: 1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.slide-dot{
+    position: absolute;
+    bottom: 10%;
+    left: 48%;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+span.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+@-webkit-keyframes fade {
+    from {opacity: 0.2}
+    to {opacity: 0.5}
+}
+
+@keyframes fade {
+    from {opacity: 0.2}
+    to {opacity: 0.5}
+}
+.photo_section{
+    overflow: hidden;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out
+
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.categories{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.categories:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
