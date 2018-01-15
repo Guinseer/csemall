@@ -1,122 +1,228 @@
-<div id="headers">
-  <div id="header_content">
-    <div id="logo">
-      <a href="/">
-        <h1>CSE mall</h1>
-      </a>
-    </div>
-    <div id="menu">
-      <div class="left">
-        <a href="/">
-          <i class="fa fa-bars"></i><span>카테고리</span>
-        </a>
-      </div>
-      <div class="right">
-        <div>
-          <a href="/">
-            <span>로그인</span>
-          </a>
-          <span class="or">
+<div id="headers" class="rel">
+    <div id="header_content">
+        <div id="logo">
+            <a href="/">
+                <img src="assets/images/logo/logo.jpg">
+            </a>
+        </div>
+        <div id="menu">
+            <div  class="left">
+                <a href="/" >
+                    <i class="fa fa-bars"></i><span>카테고리</span>
+                </a>
+                <div id="categories">
+                    <div class="three">a</div>
+                    <div class="three">b</div>
+                    <div class="three">c</div>
+                </div>
+            </div>
+            <div *ngIf="user | async; then auth else guest"></div>
+            <div class="right">
+                <div>
+                    <a href="/">
+                        <span>로그인</span>
+                    </a>
+                    <span class="or">
             |
           </span>
-        </div>
-        <div>
-          <a href="/">
-            <span>회원가입</span>
-          </a>
+                </div>
+                <div>
+                    <a href="/">
+                        <span>회원가입</span>
+                    </a>
 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
 </div>
 
 <div [mnFullpage]=options [mnFullpageOnLeave]=onLeave [mnFullpageAfterLoad]=afterLoad>
-  <div id="section1" class="section welcome-section fp-section fp-table" data-anchor="slide1">
-    <div class="fp-tableCell">
-      <div class="photo_section">
-        <div class="slideshow-container">
-          <div>
-            <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[0]}">
-              <img src="assets/images/male-fashion.jpg">
-            </div>
-            <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[1]}">
-              <img src="assets/images/men-fashion.jpg">
-            </div>
-            <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[2]}">
-              <img src="assets/images/woman.jpg">
-            </div>
-          </div>
+    <div id="section1" class="section welcome-section fp-section fp-table" data-anchor="slide1">
+        <div class="fp-tableCell">
+            <div class="photo_section">
+                <div class="slideshow-container">
+                    <div>
+                        <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[0]}">
+                            <img src="assets/images/male-fashion.jpg">
+                        </div>
+                        <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[1]}">
+                            <img src="assets/images/men-fashion.jpg">
+                        </div>
+                        <div [ngClass]="{'mySlides': true, 'no_opacity': opacity[2]}">
+                            <img src="assets/images/woman.jpg">
+                        </div>
+                    </div>
 
-          <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-          <a class="next" (click)="plusSlides(1)">&#10095;</a>
-          <div class="slide-dot" style="text-align:center">
-            <span [ngClass]="{'active': active[0]}" class="dot" (click)="currentSlide(1)"></span>
-            <span [ngClass]="{'active': active[1]}" class="dot" (click)="currentSlide(2)"></span>
-            <span [ngClass]="{'active': active[2]}" class="dot" (click)="currentSlide(3)"></span>
-          </div>
+                    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+                    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+                    <div class="slide-dot" style="text-align:center">
+                        <span [ngClass]="{'active': active[0]}" class="dot" (click)="currentSlide(1)"></span>
+                        <span [ngClass]="{'active': active[1]}" class="dot" (click)="currentSlide(2)"></span>
+                        <span [ngClass]="{'active': active[2]}" class="dot" (click)="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div id="section2" class="section welcome-section fp-section fp-table" data-anchor="slide2">
-    <div class="fp-tableCell">
-      <div class="card">
-        <div class="big_item yellow">
-            <img class="categories" src="assets/images/slide2/man.jpg">
-        </div>
-        <div class="big_item yellow">
-        </div>
-        <div class="big_item yellow">
-        </div>
-      </div>
+    <div id="section2" class="section welcome-section fp-section fp-table" data-anchor="slide2">
+        <div class="fp-tableCell">
+            <div class="card">
+                <div class="big_item yellow rel">
+                    <a href="/">
+                        <img class="categories fit" src="assets/images/slide2/man.jpg">
+                        <div class="cover">
+                            <div class="mid">
+                                <div><span class="categories_title">men's</span></div>
+                                <div>
+                                    <button class="categories_button">SHOP NOW!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="big_item yellow rel">
+                    <a href="/">
+                        <img class="categories fit" src="assets/images/slide2/accesories.jpg">
+                        <div class="cover">
+                            <div class="mid">
+                                <div><span class="categories_title">accesories</span></div>
+                                <div>
+                                    <button class="categories_button">SHOP NOW!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="big_item yellow rel">
+                    <a href="/">
+                        <img class="categories fit" src="assets/images/slide2/woman.jpg">
+                        <div class="cover">
+                            <div class="mid">
+                                <div><span class="categories_title">women's</span></div>
+                                <div>
+                                    <button class="categories_button">SHOP NOW!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
+        </div>
     </div>
-  </div>
-  <div id="section3" class="section welcome-section fp-section fp-table" data-anchor="slide3">
-    <div class="fp-tableCell">
-      <div class="card">
-        <div class="item blue">
+    <div id="section3" class="section welcome-section fp-section fp-table" data-anchor="slide3">
+        <div class="fp-tableCell">
+            <div class="card">
+                <div class="main_title">FEATURED PRODUCTS</div>
+                <div class="item rel" *ngFor="let item of items">
+                    <div class="item_img rel">
+                        <img class="fit" src="{{item.src}}">
+                        <div class="counter_container">
+                            <div>{{item.day}}</div>
+                            <div>{{item.hour}}</div>
+                            <div>{{item.min}}</div>
+                            <div>{{item.sec}}</div>
+                        </div>
+                        <div class="sale" *ngIf="item.hasSale">
+                            <div>SALE</div>
+                            <div>-{{item.discount}}%</div>
+                        </div>
+                        <div class="new" *ngIf="item.new">
+                            <div>NEW</div>
+                        </div>
+                    </div>
+                    <div class="item_info">
+                        <div class="item_title">{{item.name}}</div>
+                        <div class="item_price"><span class="current" *ngIf="item.current">\{{numberWithCommas(item.current)}}</span><span
+                                class="original" *ngIf="item.hasSale">\{{numberWithCommas(item.original)}}</span></div>
+                    </div>
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+                <div class="item blue">
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="container">
+                    <div class="two rel">
+                        <div class="customer">
+                            <div>고객센터</div>
+                            <div class="number">010-xxxx-xxxx</div>
+                        </div>
+
+                        <a href="/"><img src="assets/images/logo/logo.jpg"></a>
+                        <div class="company_info">
+                            <div>OWNER : 최승언</div>
+                            <div>본사: 인천광역시 xx동 xx로 xx-1 xx빌리지 xx호</div>
+                            <div>사업자 등록번호 : xxx-xx-xxxxxx</div>
+                            <div>통신판매업신고 : 제2017-인천부평-2903호</div>
+                            <div>개인정보관리책임자 : 최승언</div>
+                        </div>
+
+
+                    </div>
+                    <div class="two">
+                        <div class="three">
+                            <div class="underline">INFORMATION</div>
+                            <div>About Us</div>
+                            <div>Privacy Policy</div>
+                            <div>Site Map</div>
+                            <div>Search Terms</div>
+                            <div>Contact us</div>
+                        </div>
+
+                        <div class="three">
+                            <div class="underline">CUSTOMER SERVICE</div>
+                            <div>Q&A</div>
+                            <div>Notice</div>
+                            <div>이벤트</div>
+                            <div>배송조회</div>
+                        </div>
+                        <div class="three">
+                            <div class="underline">DELIVERY INFO</div>
+                            <div>Sign in</div>
+                            <div>View Cart</div>
+                            <div>My Whishlist</div>
+                            <div>Help</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-        <div class="item blue">
-        </div>
-      </div>
     </div>
-  </div>
 </div>
